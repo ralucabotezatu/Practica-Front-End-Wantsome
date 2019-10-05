@@ -9,8 +9,8 @@ body{
     width: 100px;
     height: 100px;
    position: relative;
-    
-    
+   margin-bottom: 100px;
+   
 }
 .div2{
 
@@ -31,4 +31,10 @@ body{
     top: 50px;
     left: 50px;
     position: absolute;
+}
+
+h1::after{content: "*"
+}
+
+h1::before{content: "*"
 }
