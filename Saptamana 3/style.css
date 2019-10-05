@@ -1,0 +1,24 @@
+.title-paragraph {
+    color: red;
+    font-size: 30px;
+}
+#title {
+
+    color: red;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.titlespan{
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: blueviolet;
+}
+
+a[href]{
+
+    color: crimson;
+}
+
+
+
