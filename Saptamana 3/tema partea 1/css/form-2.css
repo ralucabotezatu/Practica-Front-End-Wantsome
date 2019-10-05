@@ -1,0 +1,35 @@
+body{
+    font-style: oblique bold;
+    font-family: 'Noto Serif', serif;
+    background-color: yellowgreen;
+    text-align: center;
+}
+
+label {
+    color: aquamarine;
+    font-size: 18px;
+}
+
+input[type="checkbox"] {
+    box-sizing: border-box;
+    padding: 5px;
+    margin: 5px;
+    height: 17px;
+}
+
+input[type="text"], input[type="email"], input[type="number"], select {
+    border-radius: 10px;
+    border: 1px dotted violet;
+    box-sizing: border-box;
+    padding: 5px;
+    outline: none;
+}
+
+input[type="submit"] {
+    border-radius: 10px;
+    border: 5px solid black;
+    box-sizing: border-box;
+    padding: 5px;
+    outline: none;
+    color: red;
+}
