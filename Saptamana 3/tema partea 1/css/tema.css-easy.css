@@ -1,0 +1,28 @@
+body{
+    font-family: 'Lobster', cursive;
+}
+
+li a{
+    color: red;
+}
+
+.black_border{
+    border: 1px solid black;
+}
+
+.black_border_links{
+    color: green;
+}
+
+#red_link{
+    color: red;
+}
+
+figure{
+    width: 150px;
+    height: 150px;
+}
+
+figcaption{
+    font-family: 'Times New Roman', Times, serif;
+}
