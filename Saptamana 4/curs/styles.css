@@ -1,0 +1,46 @@
+header{
+    background-color: purple;
+    padding: 50px;
+    text-align: center;
+    font-style: italic;
+    font-size: 25px;
+
+}
+
+footer{
+    text-align: center;
+    font-style: italic;
+    font-size: 25px;
+    background-color: brown;
+    padding: 50px;
+
+}
+.left-sidebar{
+
+width: 450px;
+height: 250px;
+background-color: blue;
+font-style: italic;
+font-size: 25px;
+}
+
+main{
+
+    display: flex;
+}
+
+.main-content{
+width: 100%;
+background-color: white;
+font-style: italic;
+font-size: 25px;
+}
+
+.right-sidebar{
+    width: 450px;
+    height: 250px;
+    background-color: yellowgreen;
+    font-style: italic;
+    font-size: 25px;
+
+}
