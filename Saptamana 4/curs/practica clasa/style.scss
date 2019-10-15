@@ -1,0 +1,35 @@
+$background-color: violet;
+header{
+
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content: space-around;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    list-style: none;
+    float: right;
+}
+
+img{
+    
+    width: 1280px;
+    height: 200px;
+    box-sizing: border-box;
+    position: absolute;
+    
+    
+}
+
+h1{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    flex-direction: row;
+    display: flex;
+    position: relative;
+
+}

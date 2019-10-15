@@ -1,0 +1,19 @@
+$backgroundColor1: black;
+$backgroundColor2: pink;
+$borderColor: #3399ff;
+$divWidth: 300px;
+$divHeight: 300px;
+
+div{
+    width: $divWidth;
+    height: $divHeight;
+    background-color:$backgroundColor1;
+    border-color: $borderColor;
+}
+
+div:nth-of-type(2){
+    width: $divWidth;
+    height: $divHeight;
+    background-color: $backgroundColor2;
+    
+}
