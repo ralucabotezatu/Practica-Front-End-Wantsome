@@ -1,35 +1,66 @@
 $background-color: violet;
-header{
+$font-family-roboto: 'Roboto', sans-serif;
 
-    display: flex;
-    position: relative;
-    flex-direction: row;
-    justify-content: space-around;
-}
-ul{
-    display: flex;
-    flex-direction: row;
-    position: absolute;
-    list-style: none;
-    float: right;
-}
-
-img{
-    
-    width: 1280px;
-    height: 200px;
-    box-sizing: border-box;
-    position: absolute;
-    
-    
-}
-
-h1{
+body{
     text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-style: italic;
-    flex-direction: row;
-    display: flex;
-    position: relative;
-
+    font-family: $font-family-roboto;
+    
 }
+
+.main-container{
+    margin: 0 auto;
+    text-align: left;
+    width: 80%;
+}
+
+header{
+    background-image: url('./galaxy.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 250px;
+    color: white;
+    text-shadow: 2px 2px black;
+
+    h1, h2 {
+        text-align: center;
+    }
+    h1{
+        font-size: 30px;
+        font-style: italic;
+        font-weight: 300;
+        padding: 0;
+        margin: 0;
+    }
+    .logo{
+
+        display: inline-block;
+        padding: 30px;
+        color: white;
+        text-decoration: none;
+    }
+    nav{
+
+        float:right;
+        padding: 0 20px 0 20px;
+        
+        li{
+            list-style: none;
+            // display: inline-block;
+            float: left;
+            padding: 10px;
+    
+        }
+    }
+    h2{
+        font-size: 8px;
+        font-weight: 100;
+        font-style: italic;
+    }
+}
+
+
+
+
+ 
+
+
