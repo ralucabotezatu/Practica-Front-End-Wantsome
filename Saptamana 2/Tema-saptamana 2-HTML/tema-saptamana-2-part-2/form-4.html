@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="EN">
+<head>
+    <title>HTML Elements and Attributes exercise 4</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <h1>My feedback form</h1>
+    <br>
+    <form action="ruta-salvare-form" method="POST">
+        <ul>
+            <li>
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name">
+            </li>
+            <br>
+            <li>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email">
+            </li>
+            <br>
+            <li>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password">
+            </li>
+            <br>
+        </ul>
+        <ul>
+            <li>
+                <span>Please check all the emotions that apply to you:</span>
+                <ul style="list-style-type: disc">
+                    <li>
+                        <label for="angry">Angry</label>
+                        <input type="checkbox" name="angry" id="angry" value="angry" checked>
+                    </li>
+
+                    <li>
+                        <label for="sad">Sad</label>
+                        <input type="checkbox" name="sad" id="sad" value="sad">
+                    </li>
+
+                    <li>
+                        <label for="happy">Happy</label>
+                        <input type="checkbox" name="happy" id="happy" value="happy">
+                    </li>
+
+                    <li>
+                        <label for="ambivalent">Ambivalent</label>
+                        <input type="checkbox" name="ambivalent" id="ambivalent" value="ambivalent">
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <span>How satisfied were you with our service?</span>
+                <ul style="list-style-type: disc">
+                    <li>
+                        <label for="id_very">Very satisfied</label>
+                        <input type="radio" name="satisfactionlevel" id="id_very" value="very" checked>
+                    </li>
+                    <li>
+                        <label for="id_satisfied">Satisfied</label>
+                        <input type="radio" name="satisfactionlevel" id="id_satisfied" value="satisfied">
+                    </li>
+                    <li>
+                        <label for="id_didntcare">Didn`t care</label>
+                        <input type="radio" name="satisfactionlevel" id="id_didntcare" value="didntcare">
+                    </li>
+                    <li>
+                        <label for="id_dissatisfied">Dissatisfied</label>
+                        <input type="radio" name="satisfactionlevel" id="id_dissatisfied" value="dissatisfied">
+                    </li>
+                    <li>
+                        <label for="id_verydissatisfied">Very Dissatisfied</label>
+                        <input type="radio" name="satisfactionlevel" id="id_verydissatisfied" value="verydissatisfied">
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <label for="message">Further comments:</label>
+                <textarea name="message" id="message" cols="30" rows="5"></textarea>
+            </li>
+            <li>
+                <label for="submitphoto">Bio photo:</label>
+                <input type="file" name="submitphoto" id="submitphoto">
+            </li>
+            <li>
+                <label for="locations">Location visited:</label>
+                <input type="number" name="locations" id="locations" placeholder="Select location" min="0">
+            </li>
+            <li>
+                <input type="submit" value="Submit">
+            </li>
+        </ul>
+    </form>
+</body>
+</html>

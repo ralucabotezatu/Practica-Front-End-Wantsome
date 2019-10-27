@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="EN">
+<head>
+    <title>HTML Elements and Attributes exercise 3</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <form action="ruta-salvare-form" method="POST">
+        <label for="search">Search for:</label>
+        <br>
+        <input type="text" id="search" name="search" placeholder="chocolate cheescake recipes">
+        <input type="submit" value="Search">
+        <br>
+        <span>Match:</span>
+        <input type="radio" name="word" id="anyword" value="Any word" checked>
+        <label for="anyword">Any word</label>
+        <input type="radio" name="word" id="allwords" value="All words">
+        <label for="anyword">Any word</label>
+        <input type="radio" name="word" id="excatphrase" value="Exact phrase">
+        <label for="excatphrase">Exact phrase</label>
+        <br>
+        <input type="checkbox" name="alikematch" id="alikematch" value="Sound-alike matching" checked>
+        <label for="alikematch">Sound-alike matching</label>
+        <br>
+        <span>Dated:</span>
+        <input type="radio" name="datedradio" id="datedyear" value="year">
+        <select name="yearselector" id="yearselector">
+            <option value="lastyear">Within the last year</option>
+            <option value="thisyear">Within this year</option>
+        </select>
+        <br>
+        <span>From:</span>
+        <input type="radio" checked id="frominterval" name="datedradio" value="interval">
+        <select name="startmonth" id="startmonth">
+            <option value="September">September</option>
+            <option value="August">August</option>
+        </select>
+        <select name="startday" id="startday">
+            <option value="8">8</option>
+            <option value="9">9</option>
+        </select>
+        <span>,</span>
+        <input type="number" id="startyear" name="startyear" min="2009" max="2011" value="2009">
+        <br>
+        <span>To:</span>
+        <select name="endmonth" id="endmonth">
+            <option value="October">October</option>
+            <option value="November">November</option>
+        </select>
+        <select name="endday" id="endday">
+            <option value="18">18</option>
+            <option value="19">19</option>
+        </select>
+        <span>,</span>
+        <input type="number" id="endyear" name="endyear" min="2009" max="2011" value="2011">
+        <br>
+        <span>Within:</span>
+        <select name="within" id="within">
+            <option value="description">Description</option>
+        </select>
+        <br>
+        <span>Show:</span>
+        <select name="showcount" id="showcount">
+            <option value="10">10</option>
+        </select>
+        <span>results</span>
+        <select name="resultstype" id="resultstype">
+            <option value="with">with</option>
+        </select>
+        <span>summaries</span>
+        <br>
+        <span>Sort by:</span>
+        <select name="sorttype" id="sorttype">
+            <option value="relevance">Relevance</option>
+        </select>
+    </form>
+</body>
+</html>
