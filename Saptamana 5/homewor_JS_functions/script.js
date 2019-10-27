@@ -10,8 +10,8 @@ console.log(is_string([1, 2, 4, 0]));
 
 //2
 
-function is_Blank(vasile){
-    var result = (vasile === "")
+function is_Blank(value){
+    var result = (value === "")
     return result;
 }
 console.log(is_Blank(''));
@@ -69,13 +69,19 @@ console.log(isUpperCaseAt('Js STRING EXERCISES', 1));
 //8
 
 function insert(initialText, textToInsert, index){
-    var initialWords = initialText.split("");
-    initialWords.splice(index, 0, textToInsert);
-    return initialWords.join("");
+    // var initialWords = initialText.split("");
+    // initialWords.splice(index, 0, textToInsert);
+    // return initialWords.join("");
+
+    var firstPart = initialText.substr(0,index);
+    var secondPart = initialText.substr(index, initialText.lenght);
+
+    return firstPart + textToInsert + secondPart;
 }
 
 
 console.log(insert('We are doing some exercises.','JavaScript ',18));
+
 
 //9
 
