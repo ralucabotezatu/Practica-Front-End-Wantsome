@@ -1,3 +1,5 @@
+//https://jsfiddle.net/lucasdotnrg/xo630ac1/4/
+
 // acum se printeaza in consola '1' '2' '3' '4' '5' .
 // Vrem sa fie ordinea '3' '5' '2' '1' '4'
 //hint setTimeout
@@ -102,10 +104,19 @@ var filter = function(receivedArray , filteringFunction) {
 };
 
 // Call the filter function in 5 different cases ( 5 different filtering functions - example: filters the odd items, filter the items which are divisible by 3, etc... )
-
+const filteringFnOddNumbers = res => {
+  return res % 2 !== 0;
+}
+const filteringFnEvenNumbers = res => {
+  return res % 2 === 0;
+}
+const filteringFnDivideByThree = res => {
+  return res % 3 === 0;
+}
+console.log('filteringFnOddNumbers', filter([1, 2, 3, 4, 5, 6], filteringFnOddNumbers));
+console.log('filteringFnEvenNumbers', filter([1, 2, 3, 4, 5, 6], filteringFnEvenNumbers));
+console.log('filteringFnDivideByThree', filter([1, 2, 3, 4, 5, 6], filteringFnDivideByThree));
 // Now translate the upper function to ES6 syntax
-
-
 
 
 // 4 
@@ -118,6 +129,27 @@ Write a function named multipleCallbacks that accepts 3 arguments:
 
 The function should be written directly into ES6 specific syntax
 */
+
+const multipleCallbacks = (objectContainingStatus,onSucces,onError) => {
+  if(objectContainingStatus.status === 'success'){
+    onSucces();
+  }
+  else if (objectContainingStatus.status === 'error'){
+    onError();
+  }
+  else {
+    console.log('unknown Status');
+  }
+} 
+const onSucces = () => {
+  console.log('success');
+}
+const onError = () =>{
+  console.log('error');
+}
+multipleCallbacks({status:'success'}, onSucces, onError);
+multipleCallbacks({status:'error'}, onSucces, onError);
+multipleCallbacks({status:'warning'}, onSucces, onError);
 
 // 5
 /*
