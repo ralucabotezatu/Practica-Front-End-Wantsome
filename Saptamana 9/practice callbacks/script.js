@@ -5,45 +5,45 @@
 //hint setTimeout
 
 const func1 = () => {
-    setTimeout(function(){
-        console.log(1);
-    },2000);
-  }
-  
-  const func2 = () => {
-    setTimeout(function(){
-        console.log(2);
-    },1500);
-  }
-  
-  const func3 = () => {
-    setTimeout(function(){
-        console.log(3);
-    },500);
-   
-  }
-  
-  const func4 = () => {
-    setTimeout(function(){
-        console.log(4);
-    },2500);
-   
-  }
-  
-  const func5 = () => {
-    setTimeout(function(){
-        console.log(5);
-    },1000);
-  }
-  
-  
-  func1();
-  func2();
-  func3();
-  func4();
-  func5();
+  setTimeout(function () {
+    console.log(1);
+  }, 2000);
+}
 
-  // 1
+const func2 = () => {
+  setTimeout(function () {
+    console.log(2);
+  }, 1500);
+}
+
+const func3 = () => {
+  setTimeout(function () {
+    console.log(3);
+  }, 500);
+
+}
+
+const func4 = () => {
+  setTimeout(function () {
+    console.log(4);
+  }, 2500);
+
+}
+
+const func5 = () => {
+  setTimeout(function () {
+    console.log(5);
+  }, 1000);
+}
+
+
+func1();
+func2();
+func3();
+func4();
+func5();
+
+// 1
 /*
 Write a function that accepts 3 params(1 - array, 2 - function, 3 - function). 
 - first param defines an array of items: ex: an array of rooms:  ['bedroom', 'bathroom', 'lounge']
@@ -52,33 +52,33 @@ Write a function that accepts 3 params(1 - array, 2 - function, 3 - function).
 */
 const firstFn = value => console.log(value);
 const secondFN = () => console.log("yey,now i can drink and play games!");
-const threeParamsFunction = (arrayToIterate ,firstAction,secondAction) => {
-     for ( let i =0;i<arrayToIterate.length;i+=1){
-         const toDisplay = (`I cleaned ${arrayToIterate[i]}`);
-         firstAction(toDisplay);
-     }
-     secondAction();
+const threeParamsFunction = (arrayToIterate, firstAction, secondAction) => {
+  for (let i = 0; i < arrayToIterate.length; i += 1) {
+    const toDisplay = (`I cleaned ${arrayToIterate[i]}`);
+    firstAction(toDisplay);
+  }
+  secondAction();
 }
-threeParamsFunction(["bedroom","bathroom","lounge"],firstFn,secondFN);
+threeParamsFunction(["bedroom", "bathroom", "lounge"], firstFn, secondFN);
 
 
 // 2
 
 function customMap(array, callback) {
-	var arr = [];
-	for(var index in array){
-		arr.push(callback(array[index]));
-	}
-	return arr;
+  var arr = [];
+  for (var index in array) {
+    arr.push(callback(array[index]));
+  }
+  return arr;
 }
 
 var randomArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-const increment =a => ++a;
-const newArray = customMap(randomArray,increment);
+const increment = a => ++a;
+const newArray = customMap(randomArray, increment);
 
-const double = b => b*2;
-const square = c => c*c
+const double = b => b * 2;
+const square = c => c * c
 console.log(customMap(randomArray, increment));  // Implement the function named print so that thos console.log would display the result [ 2, 3, 4, 5, 6, 7, 8, 9, 10 ] in the console
 console.log(customMap(randomArray, double));  // Implement the function named double so that thos console.log would display the result [ 2, 4, 6, 8, 10, 12, 14, 16, 18 ]
 console.log(customMap(randomArray, square));  // Implement the function named square so that thos console.log would display the result [ 1, 4, 9, 16, 25, 36, 49, 64, 81 ]
@@ -92,7 +92,7 @@ console.log(customMap(randomArray, square));  // Implement the function named sq
 // callback with each item, adding the element to a new array only if
 // the callback returns true, and finally returning the new array.
 
-var filter = function(receivedArray , filteringFunction) {
+var filter = function (receivedArray, filteringFunction) {
   var filteredArray = [];
   for (var i = 0; i < receivedArray.length; i++) {
     var res = receivedArray[i];
@@ -130,74 +130,85 @@ Write a function named multipleCallbacks that accepts 3 arguments:
 The function should be written directly into ES6 specific syntax
 */
 
-const multipleCallbacks = (objectContainingStatus,onSucces,onError) => {
-  if(objectContainingStatus.status === 'success'){
+const multipleCallbacks = (objectContainingStatus, onSucces, onError) => {
+  if (objectContainingStatus.status === 'success') {
     onSucces();
   }
-  else if (objectContainingStatus.status === 'error'){
+  else if (objectContainingStatus.status === 'error') {
     onError();
   }
   else {
     console.log('unknown Status');
   }
-} 
+}
 const onSucces = () => {
   console.log('success');
 }
-const onError = () =>{
+const onError = () => {
   console.log('error');
 }
-multipleCallbacks({status:'success'}, onSucces, onError);
-multipleCallbacks({status:'error'}, onSucces, onError);
-multipleCallbacks({status:'warning'}, onSucces, onError);
+multipleCallbacks({ status: 'success' }, onSucces, onError);
+multipleCallbacks({ status: 'error' }, onSucces, onError);
+multipleCallbacks({ status: 'warning' }, onSucces, onError);
 
 // 5
-/*
--- FAKE DATA FETCHER --
 
-const simulateServerCall = (url, params) {
-	console.log(`Fetching data for ${params.userId} from: `, url);
-	setTimeout(() => {
+// -- FAKE DATA FETCHER --
+
+const filteringFnOnlyDevelopers = employee => {
+  return employee.title === 'Developer';
+}
+const simulateServerCall = (url, params, developersViewerFn) => {
+  console.log(`Fetching data for ${params.userId} from: `, url);
+  setTimeout(() => {
     console.log('Server responded with success');
     const fakeData = {
       numberOfEmployees: 4,
       employees: [
-      	{
-        	name: 'Employee1',
+        {
+          name: 'Employee1',
           age: 33,
           title: 'Developer',
         },
         {
-        	name: 'Employee2',
+          name: 'Employee2',
           age: 28,
           title: 'Manager',
         },
         {
-        	name: 'Employee3',
+          name: 'Employee3',
           age: 32,
           title: 'Tester',
         },
         {
-        	name: 'Employe4',
+          name: 'Employee4',
           age: 31,
           title: 'Developer',
         },
       ]
-   };
-   // now what ?
+    };
+    //now what ?
+    developers = filter(fakeData.employees, filteringFnOnlyDevelopers);
+    developersViewerFn(developers)
   });
 };
-
+const developersViewerFn = (developers) => {
+  console.log('developers', developers);
+}
 const fetchDataFor = userId => {
-  simulateServerCall('https://server.com/employee', { userId: userId });
+  simulateServerCall('https://server.com/employee', { userId: userId }, developersViewerFn );
 };
 
-Adjust the upper functions so that a callback that filters the employees if they have a developer role
-is executed within the setTimeout that simulates a request to the server; The callback should be implemented by you
-and should print on the browser's console only the employees that are developers; 
-Requirement: reuse the filtering function that you have already implemented
-*/
+fetchDataFor(1000);
+
+// Adjust the upper functions so that a callback that filters the employees if they have a developer role
+// is executed within the setTimeout that simulates a request to the server; The callback should be implemented by you
+// and should print on the browser's console only the employees that are developers; 
+// Requirement: reuse the filtering function that you have already implemented
+
 // 6
+
+
 /*
 Read about setInterval here: https://www.w3schools.com/jsref/met_win_setinterval.asp
 Using setInterval, implement a function called theFinalCountdown that accepts as a parameter a numeric value and counts down until 0 every 1s.
@@ -214,7 +225,7 @@ theFinalCountdown(10); call will display:
 7
 ...
 ...
-0 
+0
 
 and then stops
 */
